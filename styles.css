@@ -5,6 +5,14 @@
   --main-color5: #3F5274; /* section / card background */
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* GLOBAL RESET */
 body {
   margin: 0;
@@ -26,6 +34,7 @@ nav {
   padding: 10px 20px;
   z-index: 1000;
   border-bottom: 1px solid rgba(172, 187, 213, 0.15);
+  box-sizing: border-box;
 }
 
 ul {
@@ -48,6 +57,12 @@ li {
 
 .nav-link:hover {
   color: white;
+}
+
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  scroll-margin-top: 70px;
 }
 
 /* WELCOME SECTION */
@@ -73,12 +88,75 @@ li {
   font-weight: normal;
 }
 
+.hero-links {
+  margin-top: 20px;
+}
+
+.hero-links a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: var(--main-color5);
+  color: var(--main-color1);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.hero-links a:hover {
+  background-color: var(--main-color1);
+  color: var(--main-color4);
+}
+
+/* ABOUT */
+
+#about {
+  background-color: var(--main-color5);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* CERTIFICATIONS */
+
+#certifications {
+  background-color: var(--main-color4);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/*SKILLS*/
+
+#skills {
+  background-color: var(--main-color5);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skills-grid div {
+  background-color: var(--main-color5);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(172, 187, 213, 0.2);
+}
+
 /* PROJECTS */
 #projects {
-  background-color: var(--main-color5);
+  background-color: var(--main-color4);
   color: var(--main-color1);
   text-align: center;
   padding: 60px 20px;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
 }
 
 .projects-grid {
@@ -91,7 +169,7 @@ li {
 /* PROJECT CARDS */
 .project-tile {
   display: block;
-  background-color: var(--main-color4);
+  background-color: var(--main-color5);
   color: var(--main-color1);
   text-decoration: none;
   padding: 20px;
@@ -109,7 +187,7 @@ li {
 #contact {
   padding: 60px 20px;
   text-align: center;
-  background-color: var(--main-color4);
+  background-color: var(--main-color5);
 }
 
 .profile-link,
@@ -129,7 +207,7 @@ li {
 
 /* FOOTER */
 footer {
-  background-color: var(--main-color5);
+  background-color: var(--main-color4);
   color: var(--main-color2);
   text-align: center;
   padding: 20px;
@@ -137,6 +215,21 @@ footer {
 
 /* MOBILE */
 @media screen and (max-width: 450px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  li {
+    margin-left: 0;
+  }
+
   .nav-link {
     font-size: 14px;
   }
